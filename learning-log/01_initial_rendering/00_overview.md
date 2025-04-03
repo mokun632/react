@@ -56,8 +56,8 @@ React の初期レンダリングは、大きく分けて **Render フェーズ*
         Loop(Work Loop: workLoopSync/Concurrent) --> PUoW(performUnitOfWork);
         PUoW --> BW(beginWork);
         BW -- 子あり --> PUoW;
-        BW -- 子なし --> CUoW(completeUnitOfWork (`packages/react-reconciler/src/ReactFiberWorkLoop.js:1811`));
-        CUoW --> CompW(completeWork (`packages/react-reconciler/src/ReactFiberCompleteWork.js:1001`));
+        BW -- 子なし --> CUoW["completeUnitOfWork (`packages/react-reconciler/src/ReactFiberWorkLoop.js:1811`)"];
+        CUoW --> CompW["completeWork (`packages/react-reconciler/src/ReactFiberCompleteWork.js:1001`)"];
         CompW --> Parent{親へ};
         Parent -- 兄弟あり --> PUoW;
         Parent -- 兄弟なし --> CUoW;
