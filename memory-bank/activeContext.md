@@ -26,9 +26,8 @@
 
 ## 3. 次のステップ (次回セッションから)
 
-1.  **`updateContainer` の分析**: `root.render()` から呼び出される `updateContainer` (`ReactFiberReconciler.js`) の処理内容を分析し、`learning-log/01_initial_rendering/03_scheduling_and_workloop.md` に記録を開始する。
-2.  **スケジューリングとレンダリングループの分析**: 引き続き `03_scheduling_and_workloop.md` に基づき、`scheduleUpdateOnFiber` 以降の処理を分析する。
-3.  (後回し) `FiberRoot` と `HostRoot Fiber` の循環参照の必要性について、レンダリングループの分析を踏まえて再度考察する。
+1.  **`scheduleUpdateOnFiber` の分析**: `updateContainerImpl` から呼び出される `scheduleUpdateOnFiber` (`ReactFiberWorkLoop.js`) の処理内容を分析する。
+2.  **(後回し)** `FiberRoot` と `HostRoot Fiber` の循環参照の必要性について、レンダリングループの分析を踏まえて再度考察する。
 
 ## 4. 学習上の気づき・パターン（随時更新）
 

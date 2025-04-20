@@ -22,11 +22,12 @@
 *   `createRoot` の初期化プロセス (キャッシュ、初期状態、更新キュー、後処理) の分析結果を `learning-log/01_initial_rendering/02_createRoot_analysis.md` に記録完了。
 *   イベントシステムの基本フロー (`listenToAllSupportedEvents`, `markContainerAsRoot`, `getClosestInstanceFromNode`, 伝播シミュレーション) を分析し、`learning-log/02_event_system/01_basic_flow.md` に記録完了。
 *   Fiber の基本的な種類と構造 (`HostComponent`, `HostSingleton` 含む) について分析し、`learning-log/03_fiber_architecture/01_fiber_types_and_structure.md` に記録完了。
+*   `updateContainerImpl` 内の `createUpdate`, `enqueueUpdate` (および関連する `enqueueConcurrentClassUpdate`, 内部 `enqueueUpdate`, `getRootForUpdatedFiber`) の役割、特に Concurrent Mode における更新のバッチングメカニズムについて分析・議論した。
+*   `startUpdateTimerByLane` が Profiler 用の機能であることを確認した。
 
 ## 2. 現在進行中・次のタスク (次回セッションから)
 
-*   **`updateContainer` の分析**: `root.render()` から呼び出される `updateContainer` (`ReactFiberReconciler.js`) の処理内容を分析し、`learning-log/01_initial_rendering/03_scheduling_and_workloop.md` に記録を開始する。
-*   **スケジューリングとレンダリングループの分析**: 引き続き `03_scheduling_and_workloop.md` に基づき、`scheduleUpdateOnFiber` 以降の処理を分析する。
+*   **`scheduleUpdateOnFiber` の分析**: `updateContainerImpl` から呼び出される `scheduleUpdateOnFiber` (`ReactFiberWorkLoop.js`) の処理内容を分析する。
 *   **(後回し)** `FiberRoot` と `HostRoot Fiber` の循環参照の理由調査。
 
 ## 3. 未着手の主要な学習項目
